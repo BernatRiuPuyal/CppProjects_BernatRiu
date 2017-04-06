@@ -25,31 +25,32 @@ Player introducedPlayer() {
 	return{ name,puntuacio };
 
 }
-//void printRanking(std::map<std::string, int> rank) {
-//
-//	std::string  first = rank.begin();
-//
-//	for (auto it : rank.begin) {
-//		
-//		if (rank[first] < rank[it]) first = it;
-//		
-//	}
-//	int rankposition = 1;
-//	for (int c = rank[first]; c >= 0; c--) {
-//
-//		for (auto it : rank.begin) {
-//			if (rank[it] = c) {
-//				std::cout << rankposition++
-//					<< "  "
-//					<< it
-//					<< "  "
-//					<< rank[it];
-//			}
-//		}
-//		
-//	}
-//
-//}
+void printRanking(std::map<std::string, int> rank) {
+
+	std::string  biggest = rank.begin()->first;
+
+	for (auto it = rank.begin(); it != rank.end();it++) {
+		
+		if (rank[biggest] < rank[it->first]) biggest = it->first;
+		
+	}
+	int rankposition = 1;
+	for (int c = rank[biggest]; c >= 0; c--) {
+
+		for (auto it = rank.begin(); it != rank.end();it++) {
+			if (rank[it->first] == c) {
+				std::cout << rankposition++
+					<< "  "
+					<< it->first
+					<< "  "
+					<< rank[it->first]
+					<< std::endl;
+			}
+		}
+		
+	}
+
+}
 
 int main(void) {
 	// 4 jugadors predefinits
@@ -66,11 +67,9 @@ int main(void) {
 
 	ranking.insert(introducedPlayer());
 
-	for (auto it = ranking.begin();it != ranking.end();++it) {
-		std::cout << it->first << "  " << it->second << std::endl;
-	}
+	
 
-//	printRanking(ranking);
+    printRanking(ranking);
 
 
 
