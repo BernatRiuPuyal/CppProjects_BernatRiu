@@ -1,5 +1,6 @@
 #pragma once
-#include <ostream>
+#include <cstddef>
+#include <iostream>
 
 class DynArray
 {
@@ -17,8 +18,8 @@ public:
 	DynArray& operator= (const DynArray &x);							// copies all the attributes from x to this object
 
 	// iterator methods
-	int* begin (void) const;											// returns an iterator to the first element
-	int* end   (void) const;											// returns an iterator to the last element
+	int* begin (void) const;										// returns an iterator to the first element
+	int* end   (void) const;										// returns an iterator to the last element
 
 	// capacity methods
 	void resize			  (size_t n);									// resizes the array so that it contains n elements
