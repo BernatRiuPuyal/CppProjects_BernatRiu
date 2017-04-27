@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynArray", "DynArray\DynArr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlayerRanking", "PlayerRanking\PlayerRanking.vcxproj", "{D7E59E88-3C7D-4D4F-A336-B5981432CBFB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deque", "Deque\Deque.vcxproj", "{2814056E-B6CD-411F-A9A7-4209C5785412}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{D7E59E88-3C7D-4D4F-A336-B5981432CBFB}.Release|x64.Build.0 = Release|x64
 		{D7E59E88-3C7D-4D4F-A336-B5981432CBFB}.Release|x86.ActiveCfg = Release|Win32
 		{D7E59E88-3C7D-4D4F-A336-B5981432CBFB}.Release|x86.Build.0 = Release|Win32
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Debug|x64.ActiveCfg = Debug|x64
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Debug|x64.Build.0 = Debug|x64
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Debug|x86.ActiveCfg = Debug|Win32
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Debug|x86.Build.0 = Debug|Win32
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Release|x64.ActiveCfg = Release|x64
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Release|x64.Build.0 = Release|x64
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Release|x86.ActiveCfg = Release|Win32
+		{2814056E-B6CD-411F-A9A7-4209C5785412}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
