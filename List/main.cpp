@@ -107,6 +107,22 @@ int main(void) {
 
 	myList listin(5, 7);
 
+	listin.push_back(3);
+
+	listin.push_front(234);
+
+	myList list2(listin);
+
+	list2.pop_back();
+	list2.pop_front();
+
+	int ultimate = listin.back();
+	int primericio = listin.front();
+
+	myList list3;
+
+	list3.push_back(23);
+	list3.push_front(44);
 
 }
 

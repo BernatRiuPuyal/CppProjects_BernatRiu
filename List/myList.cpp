@@ -13,7 +13,7 @@ myList::myList(int f_size, int val)
 {
 	first = nullptr;
 	last = nullptr;
-	_size = f_size;
+	
 
 
 	for (int i = 0; i < f_size; i++) {
@@ -24,13 +24,32 @@ myList::myList(int f_size, int val)
 
 }
 
+myList::myList(myList &llista)
+{
+	first = nullptr;
+	last = nullptr;
+
+	NODE *it = llista.first;
+
+	while (it != nullptr) {
+
+		push_back(it->info);
+
+		it = it->next;
+		
+	}
+
+
+}
+
 void myList::push_front(int val)
 {
 
 	
-	first = new NODE({ val,nullptr,first });
+	first = new NODE({ val, nullptr, first });
 
 	if (_size > 0) first->next->prev = first;
+	else last = first;
 
 	_size++;
 }
@@ -40,28 +59,29 @@ void myList::push_back(int val)
 	last = new NODE({ val,last,nullptr });
 
 	if (_size > 0) last->prev->next = last;
+	else first = last;
 
 	_size++;
 }
 
 void myList::pop_front()
 {
-	first = first->next;
-	
-	delete first->prev;
+	NODE *aux = first->next;
 
-	first->prev = nullptr;
+	delete first;
+
+	first = aux;
 
 	_size--;
 }
 
 void myList::pop_back()
 {
-	last = last->prev;
+	NODE *aux = last->prev;
 
-	delete last->next;
+	delete last;
 
-	last->next = nullptr;
+	last = aux;
 
 	_size--;
 }
@@ -74,6 +94,16 @@ bool myList::empty()
 int myList::size()
 {
 	return _size;
+}
+
+int myList::front()
+{
+	return first->info;
+}
+
+int myList::back()
+{
+	return last->info;
 }
 
 

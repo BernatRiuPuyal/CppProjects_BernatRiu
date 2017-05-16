@@ -14,18 +14,20 @@ class myList
 	};
 	
 
-public:
+	int _size;
 
 	NODE *first;
 
 	NODE *last;
 
-	int _size;
+public:
 
-
+	
 	myList();
 
 	myList(int f_size, int val);
+
+	myList(myList &llista);
 
 	void push_front(int val);
 	
@@ -38,6 +40,10 @@ public:
 	bool empty();
 
 	int size();
+	
+	int front();
+
+	int back();
 
 	~myList();
 };
